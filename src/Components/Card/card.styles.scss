@@ -1,9 +1,10 @@
 .Card {
+  margin: 10px;
+  cursor: pointer !important;
   &__Button {
     &__gr {
       padding: 5px;
       border-radius: 20px;
-     
     }
     &:hover {
       box-shadow: 0 32px 64px 0 #bcbcbc;

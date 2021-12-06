@@ -2,23 +2,30 @@ import Button from "@mui/material/Button";
 import "./card.styles.scss";
 
 const Card = ({ title, Icon, sound }) => (
-  <div className="Card">
-    <Button
-      onClick={() => {
-        if (!document.getElementById(title).paused) {
-          document.getElementById(title).pause();
-          document
-            .querySelector(`#${title}-card`)
-            .classList.remove(`gradient-animation`);
-          return;
-        }
+  <div
+    className="Card"
+    onClick={() => {
+      if (!document.getElementById(title).paused) {
+        document.getElementById(title).pause();
         document
           .querySelector(`#${title}-card`)
-          .classList.add(`gradient-animation`);
-        document.getElementById(title).play();
-      }}
+          .classList.remove(`gradient-animation`);
+        return;
+      }
+      document
+        .querySelector(`#${title}-card`)
+        .classList.add(`gradient-animation`);
+      document.getElementById(title).play();
+    }}
+  >
+    <Button
       className="Card__Button"
-      style={{ borderRadius: 20, background: "white", textTransform: "none",padding:0 }}
+      style={{
+        borderRadius: 20,
+        background: "white",
+        textTransform: "none",
+        padding: 0,
+      }}
     >
       <div id={`${title}-card`} className="Card__Button__gr">
         <div className="Card__ButtonInner">
