@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Button {
+  &__inner {
+    height: 45px;
+    width: 160px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    padding-inline: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.avatar {
+  display: flex;
+  border: 2px solid purple;
+  // border-image-slice: 1;
+  height: 35px;
+  width: 35px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  &__upper {
+    text-align: left;
+    color: black;
+    display: flex;
+    line-height: 20px;
+  }
+  &__lower {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    font-size: 10px;
+    background: -webkit-linear-gradient(blueviolet, rgb(210, 120, 228));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.copyright-follow {
+  margin-right: 50px;
+  a {
+    text-decoration: none;
+  }
+}
+
+a.background-button {
+  position: relative;
+  width: 100%;
+  padding-top: 25.92%;
+  display: block;
+  font-family: "Luckiest Guy", cursive;
+  background-size: 100% 100%;
+  font-size: 28px;
+  text-decoration: none;
+  color: #333;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-shadow.png);
+
+  &:after {
+    content: attr(title);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-top.png);
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover:after {
+    -webkit-transform: translate(2.5%, 10%);
+    transform: translate(2.5%, 10%);
+    text-shadow: 2px 2px 1px white;
+    color: black;
+  }
+}
+
+.button-wrapper {
+  width: 350px;
+  display: flex;
+  margin: 10px;
+  float: left;
+  &:nth-child(1) a {
+    -webkit-filter: hue-rotate(170deg);
+    filter: hue-rotate(170deg);
+  }
+}

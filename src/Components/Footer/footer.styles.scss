@@ -1,0 +1,27 @@
+.Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10px;
+  background-color: #fff;
+  width: 100%;
+}
+#text-link {
+  background: linear-gradient(
+      90deg,
+      currentColor calc(100% / 3),
+      transparent 0 calc(200% / 3),
+      currentColor 0
+    )
+    var(--d, 0) 100% /300% 2px no-repeat;
+  transition: 0.5s;
+  color: rgba(83, 99, 187, 1);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  &:hover {
+    --d:100%
+  }
+}
+
