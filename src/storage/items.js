@@ -152,17 +152,17 @@ const items = [
   {
     image: Guitar,
     sound: "https://cdn.pixabay.com/audio/2021/07/27/audio_202082aa0b.mp3",
-    name: "guitar 1",
+    name: "guitar-1",
   },
   {
     image: Guitar,
     sound: "https://cdn.pixabay.com/audio/2021/10/15/audio_6fd47be4bf.mp3",
-    name: "guitar 2",
+    name: "guitar-2",
   },
   {
     image: Guitar,
     sound: "https://cdn.pixabay.com/audio/2021/07/22/audio_7109a63dab.mp3",
-    name: "guitar 3",
+    name: "guitar-3",
   },
 ];
 
