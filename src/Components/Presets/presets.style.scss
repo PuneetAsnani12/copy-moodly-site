@@ -10,6 +10,15 @@
 .definite-presets {
   .Button {
     margin-left: 10px;
+    &__innerPreset {
+      padding-inline: 20px;
+      padding-block: 5px;
+      border: 1px solid rgba(63, 81, 181, 1);
+      border-radius: 13px;
+      color: rgba(63, 81, 181, 1);
+      font-family: Epilogue;
+      font-size: 18px;
+    }
     &:hover {
       transition: 0.5s;
       box-shadow: 0 32px 64px 0 #bcbcbc;
@@ -17,11 +26,23 @@
   }
 }
 .random-presets {
-    .Button {
-      margin-left: 10px;
-      &:hover {
-        transition: 0.5s;
-        box-shadow: 0 32px 64px 0 #bcbcbc;
-      }
+  .Button {
+    margin-left: 10px;
+    &__innerRPreset {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border: 1px solid rgba(63, 81, 181, 1);
+      color: rgba(63, 81, 181, 1);
+      font-family: Epilogue;
+      font-size: 18px;
+    }
+    &:hover {
+      transition: 0.5s;
+      box-shadow: 0 32px 64px 0 #bcbcbc;
     }
   }
+}

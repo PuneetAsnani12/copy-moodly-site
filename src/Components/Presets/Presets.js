@@ -1,6 +1,7 @@
 import Button from "@mui/material/Button";
 import "./presets.style.scss";
 import ShuffleIcon from "@mui/icons-material/Shuffle";
+import Tooltip from "@mui/material/Tooltip";
 
 let previousNum = undefined;
 
@@ -57,19 +58,7 @@ const Presets = () => (
           _handlePreset(["campfire", "rowing", "library"]);
         }}
       >
-        <div
-          style={{
-            paddingInline: 20,
-            paddingBlock: 5,
-            border: "1px solid rgba(63,81,181,1)",
-            borderRadius: 13,
-            color: "rgba(63,81,181,1)",
-            fontFamily: "Epilogue",
-            fontSize: "18px",
-          }}
-        >
-          Productivity
-        </div>
+        <div className="Button__innerPreset">Productivity</div>
       </Button>
       <Button
         className="Button"
@@ -83,19 +72,7 @@ const Presets = () => (
           _handlePreset(["wind", "birds", "farm"]);
         }}
       >
-        <div
-          style={{
-            paddingInline: 20,
-            paddingBlock: 5,
-            border: "1px solid rgba(63,81,181,1)",
-            borderRadius: 13,
-            color: "rgba(63,81,181,1)",
-            fontFamily: "Epilogue",
-            fontSize: "18px",
-          }}
-        >
-          Focus
-        </div>
+        <div className="Button__innerPreset">Focus</div>
       </Button>
       <Button
         className="Button"
@@ -109,52 +86,29 @@ const Presets = () => (
           _handlePreset(["leaves", "library", "train"]);
         }}
       >
-        <div
-          style={{
-            paddingInline: 20,
-            paddingBlock: 5,
-            border: "1px solid rgba(63,81,181,1)",
-            borderRadius: 13,
-            color: "rgba(63,81,181,1)",
-            fontFamily: "Epilogue",
-            fontSize: "18px",
-          }}
-        >
-          Relax
-        </div>
+        <div className="Button__innerPreset">Relax</div>
       </Button>
     </div>
     <div className="random-presets">
-      <Button
-        className="Button"
-        style={{
-          borderRadius: "50%",
-          background: "white",
-          textTransform: "none",
-          padding: 0,
-          minWidth: "unset",
-        }}
-        onClick={() => {
-          _handlePreset(generateRandomSound());
-        }}
-      >
-        <div
+      <Tooltip title="Shuffle">
+        <Button
+          className="Button"
           style={{
-            border: "1px solid rgba(63,81,181,1)",
             borderRadius: "50%",
-            color: "rgba(63,81,181,1)",
-            fontFamily: "Epilogue",
-            fontSize: "18px",
-            height: "50px",
-            width: "50px",
-            justifyContent: "center",
-            alignItems: "center",
-            display: "flex",
+            background: "white",
+            textTransform: "none",
+            padding: 0,
+            minWidth: "unset",
+          }}
+          onClick={() => {
+            _handlePreset(generateRandomSound());
           }}
         >
-          <ShuffleIcon sx={{ color: "rgba(63,81,181,1)" }} />
-        </div>
-      </Button>
+          <div className="Button__innerRPreset">
+            <ShuffleIcon sx={{ color: "rgba(63,81,181,1)" }} />
+          </div>
+        </Button>
+      </Tooltip>
     </div>
   </div>
 );
