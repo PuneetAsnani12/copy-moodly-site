@@ -19,6 +19,7 @@ import { ReactComponent as Snow } from "../assets/images/snow.svg";
 import { ReactComponent as Train } from "../assets/images/train.svg";
 import { ReactComponent as Walk } from "../assets/images/walk.svg";
 import { ReactComponent as Wind } from "../assets/images/wind.svg";
+import { ReactComponent as Guitar } from "../assets/images/guitar.svg";
 
 import rainMp3 from "../assets/sounds/rain.mp3";
 import birdsMp3 from "../assets/sounds/birds.mp3";
@@ -147,6 +148,21 @@ const items = [
     image: Wind,
     sound: windMp3,
     name: "wind",
+  },
+  {
+    image: Guitar,
+    sound: "https://cdn.pixabay.com/audio/2021/07/27/audio_202082aa0b.mp3",
+    name: "guitar 1",
+  },
+  {
+    image: Guitar,
+    sound: "https://cdn.pixabay.com/audio/2021/10/15/audio_6fd47be4bf.mp3",
+    name: "guitar 2",
+  },
+  {
+    image: Guitar,
+    sound: "https://cdn.pixabay.com/audio/2021/07/22/audio_7109a63dab.mp3",
+    name: "guitar 3",
   },
 ];
 
