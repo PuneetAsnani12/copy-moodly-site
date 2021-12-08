@@ -2,7 +2,7 @@ import "./header.styles.scss";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import avatarImage from "../../assets/images/avatar.jpg";
-import instaImage from "../../assets/images/instagram.png";
+import instaImage from "../../assets/images/Instagram_icon.svg";
 
 const Header = () => (
   <div className="header">
@@ -32,8 +32,8 @@ const Header = () => (
             <div className="text">
               <div className="text__upper">By Puneet Asnani</div>
               <div className="text__lower">
-                follow on instagram
-                <img src={instaImage} alt="instagram"></img>
+                follow on instagram 
+                <img src={instaImage} alt="instagram" height="15px" width="14px" style={{marginLeft:2}}></img>
               </div>
             </div>
           </div>
