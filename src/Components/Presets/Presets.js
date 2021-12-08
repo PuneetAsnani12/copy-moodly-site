@@ -1,6 +1,47 @@
 import Button from "@mui/material/Button";
 import "./presets.style.scss";
-import ShuffleIcon from '@mui/icons-material/Shuffle';
+import ShuffleIcon from "@mui/icons-material/Shuffle";
+
+let previousNum = undefined;
+
+const _handlePreset = (presets) => {
+  document.querySelectorAll(`.gradient-animation`).forEach((eachElem) => {
+    eachElem.classList.remove(`gradient-animation`);
+    document.getElementById(eachElem.id.split("-")[0]).pause();
+  });
+
+  presets.forEach((preset) => {
+    document
+      .querySelector(`#${preset}-card`)
+      .classList.add(`gradient-animation`);
+    document.getElementById(preset).play();
+  });
+};
+
+const generateRandomSound = () => {
+  const soundArray = [
+    ["lightning", "farm", "steps"],
+    ["rain", "keyboard", "clock"],
+    ["leaves", "keyboard", "clock"],
+    ["campfire", "rowing", "steps"],
+    ["campfire", "wind", "farm"],
+    ["leaves", "cafe", "night"],
+    ["rain", "snow", "clock"],
+  ];
+  let index = Math.floor(Math.random() * 10) % 7;
+  if (previousNum !== undefined && index === previousNum) {
+    if (!index) {
+      index = index + 1;
+    } else if (index + 1 > 6) {
+      index = index - 1;
+    } else {
+      index = index - 1;
+    }
+  }
+  previousNum = index;
+  return soundArray[index];
+};
+
 const Presets = () => (
   <div className="presets-container">
     <div className="definite-presets">
@@ -11,6 +52,9 @@ const Presets = () => (
           background: "white",
           textTransform: "none",
           padding: 0,
+        }}
+        onClick={() => {
+          _handlePreset(["campfire", "rowing", "library"]);
         }}
       >
         <div
@@ -35,6 +79,9 @@ const Presets = () => (
           textTransform: "none",
           padding: 0,
         }}
+        onClick={() => {
+          _handlePreset(["wind", "birds", "farm"]);
+        }}
       >
         <div
           style={{
@@ -57,6 +104,9 @@ const Presets = () => (
           background: "white",
           textTransform: "none",
           padding: 0,
+        }}
+        onClick={() => {
+          _handlePreset(["leaves", "library", "train"]);
         }}
       >
         <div
@@ -82,7 +132,10 @@ const Presets = () => (
           background: "white",
           textTransform: "none",
           padding: 0,
-          minWidth:"unset"
+          minWidth: "unset",
+        }}
+        onClick={() => {
+          _handlePreset(generateRandomSound());
         }}
       >
         <div
@@ -92,15 +145,14 @@ const Presets = () => (
             color: "rgba(63,81,181,1)",
             fontFamily: "Epilogue",
             fontSize: "18px",
-            height:"50px",
-            width:"50px",
-            justifyContent:"center",
-            alignItems:"center",
-            display:"flex"
+            height: "50px",
+            width: "50px",
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
           }}
         >
-            <ShuffleIcon sx={{ color: "rgba(63,81,181,1)" }} />
-
+          <ShuffleIcon sx={{ color: "rgba(63,81,181,1)" }} />
         </div>
       </Button>
     </div>
