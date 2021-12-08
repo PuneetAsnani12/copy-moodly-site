@@ -35,9 +35,10 @@ const Card = ({ title, Icon, sound }) => (
               display: "flex",
               color: "black",
               textTransform: "capitalize",
+              fontFamily: "Epilogue",
             }}
           >
-            {title}
+            <h1>{title}</h1>
           </div>
           <div
             style={{
