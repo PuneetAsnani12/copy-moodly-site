@@ -5,7 +5,7 @@ import Tooltip from "@mui/material/Tooltip";
 
 let previousNum = undefined;
 
-const _handlePreset = (presets) => {
+const _handlePreset = (presets,reRender, setReRender) => {
   document.querySelectorAll(`.gradient-animation`).forEach((eachElem) => {
     eachElem.classList.remove(`gradient-animation`);
     document.getElementById(eachElem.id.split("-")[0]).pause();
@@ -17,6 +17,7 @@ const _handlePreset = (presets) => {
       .classList.add(`gradient-animation`);
     document.getElementById(preset).play();
   });
+  setReRender(!reRender)
 };
 
 const generateRandomSound = () => {
@@ -43,7 +44,7 @@ const generateRandomSound = () => {
   return soundArray[index];
 };
 
-const Presets = () => (
+const Presets = ({ reRender, setReRender }) => (
   <div className="presets-container">
     <div className="definite-presets">
       <Button
@@ -55,7 +56,7 @@ const Presets = () => (
           padding: 0,
         }}
         onClick={() => {
-          _handlePreset(["campfire", "rowing", "library"]);
+          _handlePreset(["campfire", "rowing", "library"],reRender, setReRender);
         }}
       >
         <div className="Button__innerPreset">Productivity</div>
@@ -69,7 +70,7 @@ const Presets = () => (
           padding: 0,
         }}
         onClick={() => {
-          _handlePreset(["wind", "birds", "farm"]);
+          _handlePreset(["wind", "birds", "farm"],reRender, setReRender);
         }}
       >
         <div className="Button__innerPreset">Focus</div>
@@ -83,7 +84,7 @@ const Presets = () => (
           padding: 0,
         }}
         onClick={() => {
-          _handlePreset(["leaves", "library", "train"]);
+          _handlePreset(["leaves", "library", "train"],reRender, setReRender);
         }}
       >
         <div className="Button__innerPreset">Relax</div>
@@ -101,7 +102,7 @@ const Presets = () => (
             minWidth: "unset",
           }}
           onClick={() => {
-            _handlePreset(generateRandomSound());
+            _handlePreset(generateRandomSound(),reRender, setReRender);
           }}
         >
           <div className="Button__innerRPreset">
