@@ -100,3 +100,12 @@
       transform: none;
     }
   }
+
+  @keyframes transOut {
+    from {
+      transform: none;
+    }
+    to {
+      transform: translateY(-120%);
+    }
+  }
