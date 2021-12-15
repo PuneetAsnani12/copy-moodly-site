@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Button from "@mui/material/Button";
 import "./card.styles.scss";
 import Slider from '@mui/material/Slider';
@@ -45,6 +45,9 @@ const VolumeSlider = styled(Slider)({
 });
 
 const Card = ({ title, Icon, sound, reRender, setReRender }) => {
+  useEffect(() => {
+    return
+  }, [reRender])
   const [volume, setVolume] = useState(100)
   const _handleVolumeChange = (event, newVal) => {
     setVolume(newVal)
