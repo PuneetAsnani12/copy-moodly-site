@@ -2,15 +2,20 @@ import "./header.styles.scss";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import avatarImage from "../../assets/images/avatar.jpg";
-import instaImage from "../../assets/images/Instagram_icon.svg";
+import githubImage from "../../assets/images/github_icon.svg";
 
 const Header = () => (
   <div className="header">
-    <div className="button-wrapper">
-      <a className="background-button" href="#" title="Moodly"></a>
+    <div class="container">
+      <div class="box">
+        <div class="title">
+          <span class="block"></span>
+          <h1>Inspiritely<span></span></h1>
+        </div>
+      </div>
     </div>
-    <div className="copyright-follow">
-      <a href="https://www.instagram.com/_puneetasnani/" target="_blank" rel="noreferrer" >
+    <div className="copyright-follow" title="@PuneetAsnani12">
+      <a href="https://github.com/PuneetAsnani12" target="_blank" rel="noreferrer" >
         <Button
           className="Button"
           style={{
@@ -32,8 +37,8 @@ const Header = () => (
             <div className="text">
               <div className="text__upper">By Puneet Asnani</div>
               <div className="text__lower">
-                follow on instagram 
-                <img src={instaImage} alt="instagram" height="15px" width="14px" style={{marginLeft:2}}></img>
+                follow on github
+                <img src={githubImage} alt="github" height="15px" width="14px" style={{ marginLeft: 2 }}></img>
               </div>
             </div>
           </div>
