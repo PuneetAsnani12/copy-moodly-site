@@ -16,7 +16,7 @@ const Cover = () => (
         </div>
 
         <div className="cover__image">
-            <img src={coverImage} alt='cover-image' />
+            <img src={coverImage} alt='cover' />
         </div>
     </div>
 );

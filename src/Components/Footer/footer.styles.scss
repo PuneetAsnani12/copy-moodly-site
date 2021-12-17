@@ -3,10 +3,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-block: 10px;
-  background-color: #fff;
+  padding-block: 20px;
   width: 100%;
   font-family: Epilogue,'sans-serif';
+  margin-top: 40px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.24), transparent);
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .Footer {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 }
 #text-link {
   background: linear-gradient(
@@ -24,5 +32,11 @@
   &:hover {
     --d:100%
   }
+}
+.text-wrapper {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: #1a237e 0px 7px 40px
 }
 

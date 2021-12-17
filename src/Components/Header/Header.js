@@ -6,10 +6,10 @@ import githubImage from "../../assets/images/github_icon.svg";
 
 const Header = () => (
   <div className="header">
-    <div class="container">
-      <div class="box">
-        <div class="title">
-          <span class="block"></span>
+    <div className="container">
+      <div className="box">
+        <div className="title">
+          <span className="block"></span>
           <h1>Inspiritely<span></span></h1>
         </div>
       </div>
@@ -23,7 +23,7 @@ const Header = () => (
             background: "white",
             textTransform: "none",
             padding: 0,
-            border: "0.5px solid #ccc",
+            border: "0.5px solid violet",
           }}
         >
           <div className="Button__inner">
@@ -31,14 +31,14 @@ const Header = () => (
               <Avatar
                 alt="@PuneetAsnani12"
                 src={avatarImage}
-                style={{ height: "30px", width: "30px" }}
+                style={{ height: "35px", width: "35px" }}
               />
             </div>
             <div className="text">
               <div className="text__upper">By Puneet Asnani</div>
               <div className="text__lower">
                 follow on github
-                <img src={githubImage} alt="github" height="15px" width="14px" style={{ marginLeft: 2 }}></img>
+                <img src={githubImage} alt="github" height="19px" width="18px" style={{ marginLeft: 2 }}></img>
               </div>
             </div>
           </div>
